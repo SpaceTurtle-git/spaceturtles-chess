@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://sd1a1v3kf0d1"]
+
+[ext_resource type="Script" uid="uid://d3kjrpbl2n8o4" path="res://scripts/promotion_menu.gd" id="1_pvcuo"]
+[ext_resource type="Texture2D" uid="uid://cl623bmfbkwd4" path="res://my_assets/WhiteKnight.png" id="2_bwmlr"]
+[ext_resource type="Texture2D" uid="uid://cyojjjrb81ix0" path="res://my_assets/WhiteQueen.png" id="3_fxn8l"]
+[ext_resource type="Texture2D" uid="uid://cfni1pe7wwp3i" path="res://my_assets/WhiteBishop.png" id="4_4t56f"]
+[ext_resource type="Texture2D" uid="uid://5kurx8g4s5tu" path="res://my_assets/WhiteRook.png" id="5_b1112"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pvcuo")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Knight" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_bwmlr")
+
+[node name="Queen" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_fxn8l")
+
+[node name="Bishop" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_4t56f")
+
+[node name="Rook" type="Button" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_b1112")
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Knight" to="." method="_on_knight_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Queen" to="." method="_on_queen_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Bishop" to="." method="_on_bishop_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Rook" to="." method="_on_rook_pressed"]

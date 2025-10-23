@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7ejbv63p4rf5"
+path="res://.godot/imported/Tchaikovsky - Waltz of the Flowers .mp3-d759118555d861f295af8bc3e76f55e8.mp3str"
+
+[deps]
+
+source_file="res://my_assets/Tchaikovsky - Waltz of the Flowers .mp3"
+dest_files=["res://.godot/imported/Tchaikovsky - Waltz of the Flowers .mp3-d759118555d861f295af8bc3e76f55e8.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

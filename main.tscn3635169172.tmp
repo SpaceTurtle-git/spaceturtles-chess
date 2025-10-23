@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b30x0ws6xugp3"]
+
+[ext_resource type="PackedScene" uid="uid://bywpwsdwfgf0u" path="res://board.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://cohrx2nsgahvl" path="res://placeHolders/Chess_board.png" id="2_0xm2m"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(72, 72)
+ignore_rotation = false
+zoom = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0xm2m")
+offset = Vector2(72, 72)
+
+[node name="Board" parent="." instance=ExtResource("1_ig7tw")]
